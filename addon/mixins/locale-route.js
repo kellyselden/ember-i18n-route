@@ -12,7 +12,7 @@ export default Ember.Mixin.create({
   },
   actions: {
     updateLocale(locale) {
-      Ember.run.scheduleOnce('afterRender', this, function() {
+      Ember.run.scheduleOnce('render', this, function() {
         this.set('i18n.locale', locale);
       });
     },
